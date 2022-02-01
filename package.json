@@ -1,0 +1,19 @@
+{
+  "name": "icantevencode",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.2.25",
+    "vue-code-highlight": "^0.7.8",
+    "vue3-highlightjs": "^1.0.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.0.0",
+    "sass": "^1.49.4",
+    "vite": "^2.7.2"
+  }
+}
