@@ -39,7 +39,7 @@ const mainStack = [
   "Vitest | Jest",
   "Pinia | Vuex",
   "Nuxt",
-  "SSR & SSG",
+  "SSR | SSG",
   "JS",
   "TS",
   "Dart SASS",
@@ -53,7 +53,6 @@ const generalStack = [
   "CSS Modules",
   "Netlify",
   "WordPress",
-  "Pure HTML + CSS",
   "jQuery",
 ];
 
@@ -65,7 +64,7 @@ const randomColor = () => {
 </script>
 
 <template>
-  <section class="techstack">
+  <section class="section section--sm techstack">
     <div>
       <h2 class="title">words i know / use / guess</h2>
       <span class="subTitle">You get the drill</span>
@@ -101,20 +100,8 @@ const randomColor = () => {
   flex-direction: column;
   align-items: center;
 
-  max-width: 910px;
-  margin-inline: auto;
-
   div .title {
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    background-image: linear-gradient(
-      to right bottom,
-      #689c80,
-      #77aa82,
-      #89b783,
-      #9fc483,
-      #b7d082
-    );
+    color: var(--clr-primary);
     font-size: var(--font-size-fluid-3);
     line-height: 1;
     text-transform: capitalize;
@@ -124,7 +111,7 @@ const randomColor = () => {
     display: block;
     font-size: var(--font-size-fluid-0);
     text-align: right;
-    color: var(--clr-primary) !important;
+    color: var(--clr-primary-3);
     margin-bottom: 3rem;
     font-style: italic;
   }
@@ -140,8 +127,8 @@ const randomColor = () => {
       background-clip: text;
       background-image: linear-gradient(
         to right,
-        var(--lime-5),
-        var(--yellow-6)
+        var(--lime-6),
+        var(--orange-4)
       );
     }
 
@@ -150,8 +137,8 @@ const randomColor = () => {
       background-clip: text;
       background-image: linear-gradient(
         to right,
-        var(--yellow-6),
-        var(--lime-5)
+        var(--orange-4),
+        var(--lime-6)
       );
     }
 

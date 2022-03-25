@@ -1,10 +1,10 @@
 <script setup>
-const codePerson = `.person{ 
+const codePerson = `const person = { 
   firstName: "Simeon", 
   lastName: "Petrov" 
 }`;
 
-const codeAbout = `.about{
+const codeAbout = `const about = {
     profesion: "Developer", 
     whatIDo: "Nobody knows tbh", 
     hobby:"Styling buttons...?"
@@ -48,7 +48,7 @@ const codeAbout = `.about{
   .title {
     font-size: 4.5rem;
     line-height: 1.2;
-    color: var(--clr-primary);
+    color: var(--clr-primary-3);
     margin-bottom: 3rem;
   }
   .img {
@@ -59,7 +59,7 @@ const codeAbout = `.about{
   }
   .title span {
     display: block;
-    color: var(--clr-primary-gamma);
+    color: var(--clr-primary);
     text-align: center;
     font-size: 3rem;
     font-family: "Open Sans";
@@ -74,17 +74,17 @@ const codeAbout = `.about{
     padding: 1rem;
     font-size: 15px;
     white-space: pre;
-    color: var(--clr-primary-gamma);
+    color: var(--clr-primary);
     background-color: var(--clr-primary-dark-300);
     background-image: linear-gradient(
       to right bottom,
-      #2f4858,
-      #2b4251,
-      #283d4b,
-      #243744,
-      #21323e
+      var(--gray-9),
+      var(--dark-6),
+      var(--dark-7),
+      var(--dark-8),
+      var(--dark-9),
     );
-    border: 1px solid var(--clr-primary-gamma);
+    border: 1px solid var(--clr-primary-3);
     border-radius: 0.5rem;
     overflow: hidden;
 

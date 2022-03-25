@@ -68,8 +68,8 @@
   /* Primary */
 
   --clr-primary: var(--lime-4);
-  --clr-primary-beta: var(--lime-5);
-  --clr-primary-gamma: var(--lime-6);
+  --clr-primary-2: var(--lime-5);
+  --clr-primary-3: var(--lime-6);
 
   /* Utils */
   --clr-page: var(--dark-7);
