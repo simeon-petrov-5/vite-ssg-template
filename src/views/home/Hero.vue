@@ -48,7 +48,7 @@ const codeAbout = `.about{
   .title {
     font-size: 4.5rem;
     line-height: 1.2;
-    color: var(--color-primary);
+    color: var(--clr-primary);
     margin-bottom: 3rem;
   }
   .img {
@@ -59,7 +59,7 @@ const codeAbout = `.about{
   }
   .title span {
     display: block;
-    color: var(--color-primary-gamma);
+    color: var(--clr-primary-gamma);
     text-align: center;
     font-size: 3rem;
     font-family: "Open Sans";
@@ -74,8 +74,8 @@ const codeAbout = `.about{
     padding: 1rem;
     font-size: 15px;
     white-space: pre;
-    color: var(--color-primary-gamma);
-    background-color: var(--color-primary-dark-300);
+    color: var(--clr-primary-gamma);
+    background-color: var(--clr-primary-dark-300);
     background-image: linear-gradient(
       to right bottom,
       #2f4858,
@@ -84,7 +84,7 @@ const codeAbout = `.about{
       #243744,
       #21323e
     );
-    border: 1px solid var(--color-primary-gamma);
+    border: 1px solid var(--clr-primary-gamma);
     border-radius: 0.5rem;
     overflow: hidden;
 

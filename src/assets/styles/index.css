@@ -3,7 +3,7 @@
 @import url("./colors.css");
 
 html {
-  background-color: var(--color-deep-blue);
+  background-color: var(--clr-page);
 }
 
 *,

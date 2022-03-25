@@ -1,73 +1,108 @@
 <script setup>
-const information = [
-  {
-    title: "Vue",
-    desc: "My primary JS framework for the last 2y+. I use it everyday for clients SPAs, websites and side-projects",
-    icon: ["fab", "vuejs"],
-    stuff: ["Vite", "Composition", "Pinia/Vuex"],
-  },
-  {
-    title: "SSR & SSG",
-    desc: "I'm working on websites, that need a little bit of additional edge regarding loading & SEO.",
-    icon: ["fas", "server"],
-    stuff: ["Nuxt", "Gatsby", "Vite SSR"],
-  },
-  {
-    title: "JS",
-    desc: "I use it to do stuff. Nothing more, nothing less.",
-    icon: ["fab", "js-square"],
-    stuff: ["VanillaJS", "TypeScript", "ESM"],
-  },
-  {
-    title: "Styling",
-    desc: "I try keeping as much as possible up-to-date with the 'modern' styling. Btw - CSS Vars are a god send.",
-    icon: ["fab", "css3-alt"],
-    stuff: ["CSS Vars", "Grid", "Flex", "Responsive"],
-  },
-  {
-    title: "CSS Frameworks",
-    desc: "I kinda use a lot of stuff (willingly or not)",
-    icon: ["fas", "file-code"],
-    stuff: ["SASS (Dart)", "WindiCSS", "CSS", "Tailwind", "PostCSS", "modules"],
-  },
-  {
-    title: "CMS",
-    desc: "When using CMS I typically use GraphQL for consuming the data",
-    icon: ["fab", "wordpress"],
-    stuff: ["Strapi", "NetlifyCMS", "Wordpress"],
-  },
+const colors = [
+  "#ffa8a8",
+  "#ff8787",
+  "#ff6b6b",
+  "#fa5252",
+  "#e599f7",
+  "#da77f2",
+  "#cc5de8",
+  "#b197fc",
+  "#9775fa",
+  "#845ef7",
+  "#4dabf7",
+  "#339af0",
+  "#228be6",
+  "#66d9e8",
+  "#3bc9db",
+  "#15aabf",
+  "#63e6be",
+  "#38d9a9",
+  "#12b886",
+  "#8ce99a",
+  "#69db7c",
+  "#40c057",
+  "#a9e34b",
+  "#94d82d",
+  "#82c91e",
+  "#ffe066",
+  "#fcc419",
+  "#fab005",
+  "#ffc078",
+  "#ffa94d",
+  "#ff922b",
+  "#fd7e14",
 ];
+const mainStack = [
+  "Vue",
+  "Vite",
+  "Vitest | Jest",
+  "Pinia | Vuex",
+  "Nuxt",
+  "SSR & SSG",
+  "JS",
+  "TS",
+  "Dart SASS",
+  "WindiCSS | Tailwind",
+  "CSS Vars",
+  "Strapi",
+];
+const generalStack = [
+  "React",
+  "Gatsby",
+  "CSS Modules",
+  "Netlify",
+  "WordPress",
+  "Pure HTML + CSS",
+  "jQuery",
+];
+
+const randomColor = () => {
+  const color = colors[Math.floor(Math.random() * colors.length)];
+
+  return `color: ${color}`;
+};
 </script>
 
 <template>
-  <section class="knowledge">
+  <section class="techstack">
     <div>
-      <h2 class="title">words i know | guess | use</h2>
+      <h2 class="title">words i know / use / guess</h2>
       <span class="subTitle">You get the drill</span>
     </div>
 
-    <ul class="cardList">
-      <li v-for="info in information" :key="info.title">
-        <article class="article">
-          <h3 class="title">{{ info.title }}</h3>
-          <p class="desc">{{ info.desc }}</p>
-          <h4 class="subTitle">Stuff used</h4>
-          <ul class="stuff">
-            <li class="stuf" v-for="stuf in info.stuff" :key="stuf">
-              <span>{{ stuf }}</span>
-            </li>
-          </ul>
-        </article>
+    <ul class="stack-list">
+      <li class="stack--main">My main stack are stuff like</li>
+      <li v-for="main in mainStack" :key="main" :style="randomColor()">
+        {{ main }}
+      </li>
+
+      <li class="stack--general">But I also know some stuff about</li>
+      <li v-for="general in generalStack" :key="general" :style="randomColor()">
+        {{ general }}
       </li>
     </ul>
   </section>
 </template>
 
 <style lang="scss" scoped>
-.knowledge {
+@keyframes fadein {
+  from {
+    margin-left: -10px;
+    opacity: 0;
+  }
+  to {
+    margin-left: 0px;
+    opacity: 1;
+  }
+}
+.techstack {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  max-width: 910px;
+  margin-inline: auto;
 
   div .title {
     -webkit-text-fill-color: transparent;
@@ -80,70 +115,54 @@ const information = [
       #9fc483,
       #b7d082
     );
-    font-size: 4rem;
+    font-size: var(--font-size-fluid-3);
     line-height: 1;
     text-transform: capitalize;
   }
   div .subTitle {
     margin-left: auto;
     display: block;
-    font-size: 1rem;
+    font-size: var(--font-size-fluid-0);
     text-align: right;
-    color: var(--color-primary) !important;
+    color: var(--clr-primary) !important;
     margin-bottom: 3rem;
     font-style: italic;
   }
-  .cardList {
-    display: inline-grid;
-    grid-template-columns: repeat(3, minmax(100px, 1fr));
-    justify-content: start;
-    gap: 1rem;
 
-    & > li:nth-child(2n + 1) {
-      padding: 1rem 0;
-    }
-  }
-}
-
-.article {
-//   height: 100%;
-  max-width: 300px;
-  border-radius: 0.5rem;
-  padding: 2rem 1rem;
-  color: var(--color-black);
-  background-color: var(--color-primary);
-
-  & > .title {
-    text-align: center;
-    margin-bottom: 0.5rem;
-  }
-  .desc {
-    padding: 0;
-    margin-bottom: 0.5rem;
-  }
-  & > .subTitle {
-    margin: 0 auto 0.5rem;
-    font-size: 14px;
-    text-transform: capitalize;
-  }
-
-  .stuff {
+  .stack-list {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 0.5rem;
-    .stuf {
-      border-radius: 0.38rem;
-      padding: 0.125rem 0.5rem;
-      background-color: var(--color-primary-beta);
+    column-gap: 2rem;
+    row-gap: 0.5rem;
+    font-size: 1.25rem;
+    .stack--main {
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
       background-image: linear-gradient(
-        to right bottom,
-        #89b783,
-        #93be83,
-        #9fc483,
-        #aaca82,
-        #b7d082
+        to right,
+        var(--lime-5),
+        var(--yellow-6)
       );
+    }
+
+    .stack--general {
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      background-image: linear-gradient(
+        to right,
+        var(--yellow-6),
+        var(--lime-5)
+      );
+    }
+
+    & > li {
+      opacity: 0;
+      animation: fadein 500ms forwards ease-in;
+    }
+    @for $i from 2 to 22 {
+      & > li:nth-child(#{$i}) {
+        animation-delay: (#{$i * 200ms});
+      }
     }
   }
 }
