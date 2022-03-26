@@ -65,7 +65,6 @@ const onSubmit = (event) => {
       method="POST"
       name="contact"
       data-netlify="true"
-      netlify
       data-netlify-recaptcha="true"
       class="form agrid"
       @submit="onSubmit($event)"
