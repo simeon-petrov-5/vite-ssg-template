@@ -70,7 +70,7 @@ const randomColor = () => {
 <template>
   <section id="section-stack" class="section section--sm techstack">
     <div :class="{ 'fade-up': isVisible }">
-      <h2 class="title">words i know / use / guess</h2>
+      <h2 class="title-1">words i know / use / guess</h2>
       <span class="subTitle">You get the drill</span>
     </div>
 
@@ -104,12 +104,6 @@ const randomColor = () => {
   flex-direction: column;
   align-items: center;
 
-  div .title {
-    color: var(--clr-primary);
-    font-size: var(--font-size-fluid-3);
-    line-height: 1;
-    text-transform: capitalize;
-  }
   div .subTitle {
     margin-left: auto;
     display: block;

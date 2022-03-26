@@ -77,5 +77,7 @@
   --clr-warn: #5e98ba;
   --clr-info: #efe583;
   --clr-black: #002d18;
-  --clr-white: #fff;
+  --clr-white: var(--gray-1);
+  --clr-text: var(--gray-1);
+  --clr-label: var(--gray-4);
 }

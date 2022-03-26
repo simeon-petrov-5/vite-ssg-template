@@ -2,6 +2,7 @@
 import Hero from "./sections/Hero.vue";
 import About from "./sections/About.vue";
 import TechStack from "./sections/TechStack.vue";
+import Contacts from "./sections/Contacts.vue";
 import { onMounted, ref } from "vue";
 
 const observerOptions = {
@@ -43,4 +44,5 @@ onMounted(() => {
   <Hero />
   <About :isVisible="isVisibleAbout" />
   <TechStack :isVisible="isVisibleStack" />
+  <Contacts />
 </template>

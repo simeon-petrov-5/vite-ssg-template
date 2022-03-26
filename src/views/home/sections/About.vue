@@ -6,9 +6,9 @@ defineProps({
 
 <template>
   <section id="section-about" class="section section--sm about">
-    <h2 :class="{ 'fade-up': isVisible }" class="title">About me</h2>
+    <h2 :class="{ 'fade-up': isVisible }" class="title-1">About me</h2>
 
-    <p :class="{ 'fade-up': isVisible }">
+    <p :class="{ 'fade-up': isVisible }" class="text">
       I'm a Front-end developer based in Sofia, Bulgaria 🇧🇬 . Currently I'm
       working at
       <a
@@ -22,7 +22,7 @@ defineProps({
       afterwards I worked couple of years with React (integrated with Sharepoint
       Online), but now I have transitioned completely to the green side.
     </p>
-    <p :class="{ 'fade-up': isVisible }">
+    <p :class="{ 'fade-up': isVisible }" class="text">
       I have worked on couple different projects and applications like: Video
       Platform <span class="accent">[ Vue ]</span>, Backoffice App
       <span class="accent">[ Vue ]</span>, Extending UI Component Library
@@ -42,26 +42,9 @@ defineProps({
 <style lang="scss" scoped>
 .about {
   position: relative;
-  .title {
-    color: var(--clr-primary-2);
-    font-size: var(--font-size-fluid-3);
-    line-height: 1;
-    text-transform: capitalize;
-    margin-bottom: 1rem;
-    opacity: 0;
-  }
   p {
     opacity: 0;
     animation-delay: 300ms;
-
-    color: var(--lime-2);
-    font-size: 1.25rem;
-    line-height: 1.5;
-    letter-spacing: 1px;
-
-    .accent {
-      color: var(--clr-primary-3);
-    }
   }
 }
 </style>
