@@ -4,6 +4,7 @@
 @use "./utillity.scss";
 @use "./components.scss";
 @use "./animations.scss";
+@import url("https://raw.githack.com/icanteven-code/alpha-grid/master/dist/agrid.css");
 
 html {
   background-color: var(--clr-page);
