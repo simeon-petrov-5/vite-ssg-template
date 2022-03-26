@@ -42,6 +42,9 @@ defineProps({
 <style lang="scss" scoped>
 .about {
   position: relative;
+  .title-1{
+    opacity: 0;
+  }
   p {
     opacity: 0;
     animation-delay: 300ms;

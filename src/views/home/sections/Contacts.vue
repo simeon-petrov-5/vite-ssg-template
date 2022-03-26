@@ -50,9 +50,9 @@ const onSubmit = (event) => {
 </script>
 
 <template>
-  <section class="section section--sm contacts">
-    <h2 class="title-1">Contacts</h2>
-    <p class="text">
+  <section id="section-contacts" class="section section--sm contacts">
+    <h2 class="title-1" :class="{ 'fade-up': isVisible }">Contacts</h2>
+    <p class="text" :class="{ 'fade-up': isVisible }">
       Find me on
       <a href="https://www.linkedin.com/in/simeonpetrov5/" target="__blank"
         >LinkedIn</a
@@ -60,6 +60,7 @@ const onSubmit = (event) => {
     </p>
 
     <form
+      :class="{ 'fade-up': isVisible }"
       ref="formRef"
       method="POST"
       data-netlify="true"
@@ -124,11 +125,19 @@ const onSubmit = (event) => {
   .title-1,
   .text {
     text-align: right;
+    opacity: 0;
+  }
+
+  .text {
+    animation-delay: 300ms;
   }
 
   .form {
     --input-container-pt: 17px;
     --input-py: 0.5rem;
+
+    opacity: 0;
+    animation-delay: 600ms;
 
     max-width: 720px;
     margin-inline: auto;

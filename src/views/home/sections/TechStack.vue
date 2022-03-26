@@ -143,7 +143,7 @@ const randomColor = () => {
       opacity: 0;
       animation: fade-right 500ms forwards ease-in;
     }
-    @for $i from 2 to 22 {
+    @for $i from 2 to 30 {
       & > li:nth-child(#{$i}) {
         animation-delay: (#{$i * 200ms});
       }

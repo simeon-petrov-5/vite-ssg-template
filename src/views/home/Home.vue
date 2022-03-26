@@ -30,12 +30,17 @@ const createObserver = (selector, callBack) => {
 
 const isVisibleAbout = ref(false);
 const isVisibleStack = ref(false);
+const isVisibleContacts = ref(false);
+
 onMounted(() => {
   createObserver("#section-about", () => {
     isVisibleAbout.value = true;
   });
   createObserver("#section-stack", () => {
     isVisibleStack.value = true;
+  });
+  createObserver("#section-contacts", () => {
+    isVisibleContacts.value = true;
   });
 });
 </script>
@@ -44,5 +49,5 @@ onMounted(() => {
   <Hero />
   <About :isVisible="isVisibleAbout" />
   <TechStack :isVisible="isVisibleStack" />
-  <Contacts />
+  <Contacts :isVisible="isVisibleContacts" />
 </template>
