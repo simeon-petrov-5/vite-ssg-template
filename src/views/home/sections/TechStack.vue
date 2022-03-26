@@ -40,22 +40,21 @@ const colors = [
 const mainStack = [
   "Vue",
   "Vite",
-  "Vitest | Jest",
-  "Pinia | Vuex",
+  "Vitest","Jest",
+  "Pinia","Vuex",
   "Nuxt",
-  "SSR | SSG",
+  "SSR","SSG",
   "JS",
   "TS",
   "Dart SASS",
-  "WindiCSS | Tailwind",
+  "WindiCSS","Tailwind",
   "CSS Vars",
-  "Strapi",
+  "Strapi", "JAM Stack"
 ];
 const generalStack = [
   "React",
   "Gatsby",
-  "CSS Modules",
-  "Netlify",
+  "NetlifyCMS",
   "WordPress",
   "jQuery",
 ];

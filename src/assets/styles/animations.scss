@@ -14,3 +14,14 @@
 .fade-up {
   animation: fade-up 1000ms forwards;
 }
+
+// Vue transition
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 300ms ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
