@@ -66,6 +66,7 @@ const onSubmit = (event) => {
       data-netlify="true"
       class="form agrid"
       @submit="onSubmit($event)"
+      action="/submission-success"
     >
       <div class="name acol-sm-5">
         <input

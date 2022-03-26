@@ -1,3 +1,15 @@
+<script setup>
+useHead({
+  title: "404 | icantevencode",
+  meta: [
+    {
+      name: `description`,
+      content: `Not Found`,
+    },
+  ],
+});
+</script>
+
 <template>
   <section class="not-found section">
     <div>
@@ -11,7 +23,9 @@
         width="480"
       />
       <p>
-        <a href="https://giphy.com/gifs/4MjVrfDD2WrN6" target="__blank">via GIPHY</a>
+        <a href="https://giphy.com/gifs/4MjVrfDD2WrN6" target="__blank"
+          >via GIPHY</a
+        >
       </p>
     </div>
 

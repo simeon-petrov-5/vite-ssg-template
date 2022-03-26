@@ -3,13 +3,15 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite-ssg build",
     "preview": "vite preview",
     "deps:check": "ncu --reject @u2p/ui-library",
     "deps:update": "ncu -u --reject @u2p/ui-library"
   },
   "dependencies": {
+    "@vueuse/head": "^0.7.5",
     "unplugin-auto-import": "^0.6.6",
+    "vite-ssg": "^0.19.0",
     "vue": "^3.2.31",
     "vue-code-highlight": "^0.7.8",
     "vue-router": "^4.0.14",

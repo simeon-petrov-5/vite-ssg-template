@@ -14,7 +14,7 @@ export default defineConfig({
         /\.js$/,
       ],
       imports: [
-        'vue', 'vue-router'
+        'vue', 'vue-router', { '@vueuse/head': ['useHead'] }
       ],
 
     }),

@@ -1,3 +1,15 @@
+<script setup>
+useHead({
+  title: "Success | icantevencode",
+  meta: [
+    {
+      name: `description`,
+      content: `Email sent successfully`,
+    },
+  ],
+});
+</script>
+
 <template>
   <section class="not-found section">
     <h1 class="title-1">Email sent successfully!</h1>

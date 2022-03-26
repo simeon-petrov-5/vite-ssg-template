@@ -5,6 +5,16 @@ import TechStack from "./sections/TechStack.vue";
 import Contacts from "./sections/Contacts.vue";
 import { onMounted, ref } from "vue";
 
+useHead({
+  title: "Home | icantevencode",
+  meta: [
+    {
+      name: `description`,
+      content: `Simeon Petrov's website & blog - icantevencode`,
+    },
+  ],
+});
+
 const observerOptions = {
   root: null,
   rootMargin: "0px",
