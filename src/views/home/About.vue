@@ -5,10 +5,17 @@
     <h2 class="title">About me</h2>
     <p>
       I'm a Front-end developer based in Sofia, Bulgaria 🇧🇬 . Currently I'm
-      working @Blubito with Vue as my main framework. I have had some experience
-      with Angular, afterwards I worked couple of years with React (integrated
-      with Sharepoint Online), but now I have transitioned completely to the
-      green side.
+      working at
+      <a
+        href="https://blubito.de/jobs/en/"
+        target="__blank"
+        title="Blubito's website"
+      >
+        Blubito
+      </a>
+      with Vue as my main framework. I have had some experience with Angular,
+      afterwards I worked couple of years with React (integrated with Sharepoint
+      Online), but now I have transitioned completely to the green side.
     </p>
     <p>
       I have worked on couple different projects and applications like: Video

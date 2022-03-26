@@ -1,0 +1,15 @@
+@use "./reset.scss";
+@use "./typography.scss";
+@use "./colors.scss";
+@use "./utillity.scss";
+@use "./components.scss";
+
+html {
+  background-color: var(--clr-page);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
