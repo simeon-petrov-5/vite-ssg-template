@@ -1,0 +1,46 @@
+<script setup>
+import Hero from "./sections/Hero.vue";
+import About from "./sections/About.vue";
+import TechStack from "./sections/TechStack.vue";
+import { onMounted, ref } from "vue";
+
+const observerOptions = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.2,
+};
+
+const createObserver = (selector, callBack) => {
+  const queryEl = document.querySelector(selector);
+
+  const observerCallBack = (entries, observer) => {
+    const { isIntersecting } = entries[0];
+    console.log("isIntersecting", isIntersecting);
+    if (isIntersecting) {
+      observer.disconnect();
+      callBack();
+    }
+  };
+
+  const observer = new IntersectionObserver(observerCallBack, observerOptions);
+
+  observer.observe(queryEl);
+};
+
+const isVisibleAbout = ref(false);
+const isVisibleStack = ref(false);
+onMounted(() => {
+  createObserver("#section-about", () => {
+    isVisibleAbout.value = true;
+  });
+  createObserver("#section-stack", () => {
+    isVisibleStack.value = true;
+  });
+});
+</script>
+
+<template>
+  <Hero />
+  <About :isVisible="isVisibleAbout" />
+  <TechStack :isVisible="isVisibleStack" />
+</template>

@@ -19,7 +19,7 @@ const codeAbout = `const about = {
       <div class="imgWrapper">
         <img
           class="img"
-          src="../../assets/img/15708352.jpg"
+          src="@/assets/img/15708352.jpg"
           alt="Simeon photo"
         />
       </div>

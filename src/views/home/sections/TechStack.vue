@@ -1,4 +1,8 @@
 <script setup>
+defineProps({
+  isVisible: Boolean,
+});
+
 const colors = [
   "#ffa8a8",
   "#ff8787",
@@ -64,13 +68,13 @@ const randomColor = () => {
 </script>
 
 <template>
-  <section class="section section--sm techstack">
-    <div>
+  <section id="section-stack" class="section section--sm techstack">
+    <div :class="{ 'fade-up': isVisible }">
       <h2 class="title">words i know / use / guess</h2>
       <span class="subTitle">You get the drill</span>
     </div>
 
-    <ul class="stack-list">
+    <ul v-if="isVisible" class="stack-list">
       <li class="stack--main">My main stack are stuff like</li>
       <li v-for="main in mainStack" :key="main" :style="randomColor()">
         {{ main }}
@@ -85,7 +89,7 @@ const randomColor = () => {
 </template>
 
 <style lang="scss" scoped>
-@keyframes fadein {
+@keyframes fade-right {
   from {
     margin-left: -10px;
     opacity: 0;
@@ -144,7 +148,7 @@ const randomColor = () => {
 
     & > li {
       opacity: 0;
-      animation: fadein 500ms forwards ease-in;
+      animation: fade-right 500ms forwards ease-in;
     }
     @for $i from 2 to 22 {
       & > li:nth-child(#{$i}) {
