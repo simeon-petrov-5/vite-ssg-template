@@ -11,9 +11,10 @@ export default defineConfig({
       include: [
         /\.vue$/, /\.vue\?vue/, // .vue
         /\.md$/, // .md
+        /\.js$/,
       ],
       imports: [
-        'vue',
+        'vue', 'vue-router'
       ],
 
     }),
