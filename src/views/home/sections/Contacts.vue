@@ -63,6 +63,7 @@ const onSubmit = (event) => {
       :class="{ 'fade-up': isVisible }"
       ref="formRef"
       method="POST"
+      name="contact"
       data-netlify="true"
       class="form agrid"
       @submit="onSubmit($event)"
