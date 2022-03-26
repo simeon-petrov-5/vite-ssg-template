@@ -60,15 +60,14 @@ const onSubmit = (event) => {
     </p>
 
     <form
-      :class="{ 'fade-up': isVisible }"
+      action="/submission-success"
       ref="formRef"
       method="POST"
       name="contact"
       data-netlify="true"
       data-netlify-recaptcha="true"
       class="form agrid"
-      @submit="onSubmit($event)"
-      action="/submission-success"
+      :class="{ 'fade-up': isVisible }"
     >
       <div class="name acol-sm-5">
         <input
