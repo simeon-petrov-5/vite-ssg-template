@@ -1,8 +1,8 @@
 <script setup>
-import Hero from "./sections/Hero.vue";
-import About from "./sections/About.vue";
-import TechStack from "./sections/TechStack.vue";
-import Contacts from "./sections/Contacts.vue";
+import Hero from "./components/Hero.vue";
+import About from "./components/About.vue";
+import TechStack from "./components/TechStack.vue";
+import Contacts from "./components/Contacts.vue";
 import { onMounted, ref } from "vue";
 
 useHead({
