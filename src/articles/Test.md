@@ -1,5 +1,5 @@
 ---
-title: My Cool App
+name: My Cool App
 ---
 
 # Hello World
