@@ -35,33 +35,15 @@ const nameError = computed(() => errorValidation("name"));
 const emailError = computed(() => errorValidation("email"));
 const messageError = computed(() => errorValidation("message"));
 
+const formRef = ref(null);
 const onSubmit = (event) => {
+  event.preventDefault();
   touched.name = true;
   touched.email = true;
   touched.message = true;
 
   if (!nameError.value && !emailError.value && !messageError.value) {
-    const body = new FormData();
-
-    Object.keys(formData).forEach((key) => {
-      body.append(key, formData[key]);
-    });
-
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(body).toString(),
-    })
-      .then((response) => {
-        if (!response.ok) {
-          // make the promise be rejected if we didn't get a 2xx response
-          const err = new Error("Oos, didn't send that one! Try again :)");
-          err.response = response;
-          throw err;
-        } 
-        console.log('SUCCESS')
-      })
-      .catch((error) => alert(error));
+    formRef.value.submit();
   }
 };
 </script>
@@ -77,12 +59,15 @@ const onSubmit = (event) => {
     </p>
 
     <form
+      ref="formRef"
       name="contact"
+      method="post"
+      action="/submission-success"
       data-netlify="true"
       data-netlify-recaptcha="true"
       class="form agrid"
       :class="{ 'fade-up': isVisible }"
-      @submit.prevent="onSubmit"
+      @submit="onSubmit($event)"
     >
       <input type="hidden" name="form-name" value="contact" />
 
