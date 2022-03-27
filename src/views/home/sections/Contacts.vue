@@ -35,7 +35,6 @@ const nameError = computed(() => errorValidation("name"));
 const emailError = computed(() => errorValidation("email"));
 const messageError = computed(() => errorValidation("message"));
 
-const formRef = ref(null);
 const onSubmit = (event) => {
   event.preventDefault();
   touched.name = true;
@@ -43,7 +42,7 @@ const onSubmit = (event) => {
   touched.message = true;
 
   if (!nameError.value && !emailError.value && !messageError.value) {
-    formRef.value.submit();
+    event.form.submit();
   }
 };
 </script>
@@ -59,17 +58,14 @@ const onSubmit = (event) => {
     </p>
 
     <form
-      ref="formRef"
-      name="contact"
-      method="post"
-      action="/submission-success"
-      data-netlify="true"
-      data-netlify-recaptcha="true"
       class="form agrid"
       :class="{ 'fade-up': isVisible }"
-      @submit="onSubmit($event)"
+      name="ask-question"
+      method="post"
+      data-netlify="true"
+      action="/submission-success"
     >
-      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="form-name" value="ask-question" />
 
       <div class="name sm:acol-5">
         <input
