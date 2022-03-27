@@ -69,6 +69,9 @@ const onSubmit = (event) => {
       class="form agrid"
       :class="{ 'fade-up': isVisible }"
     >
+      <input type="hidden" name="form-name" value="contact">
+
+
       <div class="name acol-sm-5">
         <input
           id="name"
