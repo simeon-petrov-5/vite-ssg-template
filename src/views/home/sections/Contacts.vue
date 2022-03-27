@@ -35,16 +35,33 @@ const nameError = computed(() => errorValidation("name"));
 const emailError = computed(() => errorValidation("email"));
 const messageError = computed(() => errorValidation("message"));
 
-const formRef = ref(null);
-
 const onSubmit = (event) => {
-  event.preventDefault();
   touched.name = true;
   touched.email = true;
   touched.message = true;
 
   if (!nameError.value && !emailError.value && !messageError.value) {
-    formRef.value.submit();
+    const body = new FormData();
+
+    Object.keys(formData).forEach((key) => {
+      body.append(key, formData[key]);
+    });
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(body).toString(),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          // make the promise be rejected if we didn't get a 2xx response
+          const err = new Error("Oos, didn't send that one! Try again :)");
+          err.response = response;
+          throw err;
+        } 
+        console.log('SUCCESS')
+      })
+      .catch((error) => alert(error));
   }
 };
 </script>
@@ -60,19 +77,16 @@ const onSubmit = (event) => {
     </p>
 
     <form
-      action="/submission-success"
-      ref="formRef"
-      method="POST"
       name="contact"
       data-netlify="true"
       data-netlify-recaptcha="true"
       class="form agrid"
       :class="{ 'fade-up': isVisible }"
+      @submit.prevent="onSubmit"
     >
-      <input type="hidden" name="form-name" value="contact">
+      <input type="hidden" name="form-name" value="contact" />
 
-
-      <div class="name acol-sm-5">
+      <div class="name sm:acol-5">
         <input
           id="name"
           type="text"
@@ -87,7 +101,7 @@ const onSubmit = (event) => {
         </transition>
       </div>
 
-      <div class="email acol-sm-7">
+      <div class="email sm:acol-7">
         <input
           id="email"
           type="email"
@@ -119,9 +133,9 @@ const onSubmit = (event) => {
         </transition>
       </div>
 
-      <button type="submit" class="btn acol-sm-4">Send</button>
+      <button type="submit" class="btn sm:acol-4">Send</button>
 
-      <div class="acol-sm-8">
+      <div class="sm:acol-8">
         <div data-netlify-recaptcha="true"></div>
       </div>
     </form>
