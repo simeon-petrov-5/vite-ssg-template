@@ -5,6 +5,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Markdown from 'vite-plugin-md'
 import prism from 'markdown-it-prism'
 import Pages from 'vite-plugin-pages'
+import Layouts from 'vite-plugin-vue-layouts';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -15,10 +16,14 @@ export default defineConfig({
     Pages({
       dirs: [
         { dir: 'src/pages', baseRoute: '' },
-        { dir: 'src/articles', baseRoute: 'articles' }
+        { dir: 'src/blog', baseRoute: 'blog' }
       ],
       exclude: ['**/components/*.vue'],
-      extensions: ['vue', 'mdx'],
+      extensions: ['vue', 'md'],
+    }),
+    Layouts({
+      layoutsDirs: 'src/layouts',
+      defaultLayout: 'general'
     }),
     Markdown({
       headEnabled: true,
