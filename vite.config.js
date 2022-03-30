@@ -27,9 +27,9 @@ export default defineConfig({
     }),
     Markdown({
       headEnabled: true,
-      frontmatter:true,
-      exposeFrontmatter:true,
-      exposeExcerpt:true,
+      frontmatter: true,
+      exposeFrontmatter: true,
+      exposeExcerpt: true,
       markdownItUses: [
         prism,
       ],
