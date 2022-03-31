@@ -1,5 +1,5 @@
 /* Links */
-a {
+a:not(.clean) {
   display: inline-block;
   color: var(--green-9);
   transition: color 300ms ease-in-out;

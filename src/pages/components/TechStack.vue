@@ -1,8 +1,4 @@
 <script setup>
-defineProps({
-  isVisible: Boolean,
-});
-
 const colors = [
   "#ffa8a8",
   "#ff8787",
@@ -40,24 +36,23 @@ const colors = [
 const mainStack = [
   "Vue",
   "Vite",
-  "Vitest","Jest",
-  "Pinia","Vuex",
+  "Vitest",
+  "Jest",
+  "Pinia",
+  "Vuex",
   "Nuxt",
-  "SSR","SSG",
+  "SSR",
+  "SSG",
   "JS",
   "TS",
   "Dart SASS",
-  "WindiCSS","Tailwind",
+  "WindiCSS",
+  "Tailwind",
   "CSS Vars",
-  "Strapi", "JAM Stack"
+  "Strapi",
+  "JAM Stack",
 ];
-const generalStack = [
-  "React",
-  "Gatsby",
-  "NetlifyCMS",
-  "WordPress",
-  "jQuery",
-];
+const generalStack = ["React", "Gatsby", "NetlifyCMS", "WordPress", "jQuery"];
 
 const randomColor = () => {
   const color = colors[Math.floor(Math.random() * colors.length)];
@@ -68,12 +63,14 @@ const randomColor = () => {
 
 <template>
   <section id="section-stack" class="section section--sm techstack">
-    <div :class="{ 'fade-up': isVisible }">
-      <h2 class="title-1">words i know / use / guess</h2>
-      <span class="subTitle">You get the drill</span>
+    <div>
+      <h2 class="title-1" data-aos="fade-up">words i know / use / guess</h2>
+      <span class="subTitle" data-aos="fade-left" data-aos-delay="500"
+        >You get the drill</span
+      >
     </div>
 
-    <ul v-if="isVisible" class="stack-list">
+    <ul class="stack-list" data-aos="fade-up">
       <li class="stack--main">My main stack are stuff like</li>
       <li v-for="main in mainStack" :key="main" :style="randomColor()">
         {{ main }}
@@ -88,7 +85,7 @@ const randomColor = () => {
 </template>
 
 <style lang="scss" scoped>
-@keyframes fade-right {
+@keyframes stack-fade-right {
   from {
     margin-left: -10px;
     opacity: 0;
@@ -141,12 +138,15 @@ const randomColor = () => {
 
     & > li {
       opacity: 0;
-      animation: fade-right 500ms forwards ease-in;
     }
     @for $i from 2 to 30 {
       & > li:nth-child(#{$i}) {
         animation-delay: (#{$i * 200ms});
       }
+    }
+    // Small workaround to use custom animation after the aos has ended
+    &:where(.aos-animate) > li {
+      animation: stack-fade-right 500ms forwards ease-in;
     }
   }
 }

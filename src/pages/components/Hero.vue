@@ -14,19 +14,36 @@ const codeAbout = `const about = {
 <template>
   <section class="hero">
     <div class="heroContent">
-      <h1 class="title">Hello <span>I'm Simeon</span></h1>
+      <h1 data-aos="fade-up" class="title">
+        Hello <span data-aos="fade-up" data-aos-delay="200">I'm Simeon</span>
+      </h1>
 
-      <div class="imgWrapper">
-        <img
-          class="img"
-          src="@/assets/img/15708352.jpg"
-          alt="Simeon photo"
-        />
+      <div
+        id="hero-image"
+        class="imgWrapper"
+        data-aos="fade-up"
+        data-aos-delay="700"
+      >
+        <img class="img" src="@/assets/img/15708352.jpg" alt="Simeon photo" />
       </div>
 
       <div class="codes">
-        <code class="code">{{ codePerson }}</code>
-        <code class="code">{{ codeAbout }}</code>
+        <code
+          class="code"
+          data-aos-anchor="#hero-image"
+          data-aos-anchor-placement="top-bottom"
+          data-aos="fade-left"
+          data-aos-delay="1000"
+          >{{ codePerson }}</code
+        >
+        <code
+          class="code"
+          data-aos-anchor="#hero-image"
+          data-aos-anchor-placement="top-bottom"
+          data-aos="fade-left"
+          data-aos-delay="1400"
+          >{{ codeAbout }}</code
+        >
       </div>
     </div>
   </section>
@@ -82,7 +99,7 @@ const codeAbout = `const about = {
       var(--dark-6),
       var(--dark-7),
       var(--dark-8),
-      var(--dark-9),
+      var(--dark-9)
     );
     border: 1px solid var(--clr-primary-3);
     border-radius: 0.5rem;

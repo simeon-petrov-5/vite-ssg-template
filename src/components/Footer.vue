@@ -1,8 +1,4 @@
 <script setup>
-defineProps({
-  isVisible: Boolean,
-});
-
 const formData = reactive({
   name: "",
   email: "",
@@ -49,21 +45,23 @@ const onSubmit = (event) => {
 
 <template>
   <section id="section-contacts" class="section section--sm contacts">
-    <h2 class="title-1" :class="{ 'fade-up': isVisible }">Contacts</h2>
-    <p class="text" :class="{ 'fade-up': isVisible }">
+    <h2 id="contacts-title" class="title-1" data-aos="fade-up">Contacts</h2>
+    <p class="text" data-aos="fade-left" data-aos-delay="300">
       Find me on
-      <a href="https://www.linkedin.com/in/simeonpetrov5/" target="__blank"
-        >LinkedIn</a
-      >
+      <a href="https://www.linkedin.com/in/simeonpetrov5/" target="__blank">
+        LinkedIn
+      </a>
     </p>
 
     <form
       class="form agrid"
-      :class="{ 'fade-up': isVisible }"
       name="ask-question"
       method="post"
       data-netlify="true"
       action="/submission-success"
+      data-aos="fade-up"
+      data-aos-delay="600"
+      data-aos-offset="0"
     >
       <input type="hidden" name="form-name" value="ask-question" />
 
@@ -129,19 +127,10 @@ const onSubmit = (event) => {
   .title-1,
   .text {
     text-align: right;
-    opacity: 0;
   }
-
-  .text {
-    animation-delay: 300ms;
-  }
-
   .form {
     --input-container-pt: 17px;
     --input-py: 0.5rem;
-
-    opacity: 0;
-    animation-delay: 600ms;
 
     max-width: 720px;
     margin-inline: auto;

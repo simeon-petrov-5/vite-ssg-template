@@ -1,11 +1,26 @@
 import { ViteSSG } from 'vite-ssg'
 import App from './App.vue'
-import { routes } from './router'
+import { setupLayouts } from 'virtual:generated-layouts'
+import generatedRoutes from 'virtual:generated-pages'
 import './assets/styles/index.scss'
+import 'aos/dist/aos.css';
 
-// const app = createApp(App);
+const routes = setupLayouts(generatedRoutes);
 
 export const createApp = ViteSSG(
     App,
     { routes },
+    ({ router, isClient }) => {
+        router.beforeEach((to, from, next) => {
+            if (isClient) {
+                if (to.name !== from.name) {
+                    window.scrollTo(0, 0)
+                } else if (to.name === from.name && to.hash) {
+                    const element = document.getElementById(to.hash.replace('#', ''));
+                    element.scrollIntoView({ behavior: "smooth" });
+                }
+            }
+            next();
+        })
+    },
 )
