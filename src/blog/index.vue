@@ -13,7 +13,7 @@ let articles = Object.keys(articleGlobs).map((key) => {
 
 <template>
   <section class="section section--sm">
-    <h1 class="title-1">Some stuff I try to write</h1>
+    <h1 class="title-1">Sometimes I try to write</h1>
 
     <ul class="agrid">
       <li v-for="article in articles" :key="article.title" class="md:acol-6">
