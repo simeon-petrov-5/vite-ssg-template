@@ -16,9 +16,10 @@
     color: var(--clr-label);
     text-align: center;
     font-style: italic;
+    font-size: 1rem;
   }
   p {
-    font-size: 18px;
+    font-size: 1.25rem;
     letter-spacing: 1px;
     line-height: 1.5;
   }
