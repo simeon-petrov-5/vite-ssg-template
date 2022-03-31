@@ -130,34 +130,27 @@ That's actually in the order of [recommendation](https://testing-library.com/doc
 
 Many people read that list of requirements for a component and turn those into individual test cases. Maybe you've read about a so-called "only one assertion per test best practice." Let's give that a try:
 
-```js 
+```js
 
-it('should show a loading spinner', () => {
-
+  it('should show a loading spinner', () => {
     utils = render(<Course courseId={courseId} />)
-
     expect(utils.getByRole('alert')).toHaveTextContent(/loading/i)
-
   }
 
   it('should call the getCourseInfo function properly', () => {
-
     expect(getCourseInfo).toHaveBeenCalledWith(courseId)
-
   })
 
   it('should render the title', async () => {
-
     expect(await utils.findByRole('heading')).toHaveTextContent(title)
-
   })
 
 ```
 
 I definitely recommend against this approach to testing. There are a few problems with it:
 
-1. The tests are not at all isolated (read \[Test Isolation with React](https://kentcdodds.com/blog/test-isolation-with-react))
-2. Mutable variables are shared between tests (read \[Avoid Nesting when you're Testing](https://kentcdodds.com/blog/avoid-nesting-when-youre-testing))
+1. The tests are not at all isolated (read [Test Isolation with React](https://kentcdodds.com/blog/test-isolation-with-react))
+2. Mutable variables are shared between tests (read [Avoid Nesting when you're Testing](https://kentcdodds.com/blog/avoid-nesting-when-youre-testing))
 3. Asynchronous things can happen between tests resulting in you getting act warnings (for this particular example)
 
 Think of a test case workflow for a manual tester and try to make each of your test cases include all parts to that workflow. This often results in multiple actions and assertions which is fine.
@@ -181,7 +174,7 @@ Shallow Rendering - Opposite to deep rendering, shallow rendering only renders t
 
 ### Mocking
 
-In vitest (alternative of Jest for Vite) there’s a pretty good guide on \[mocking](https://vitest.dev/guide/mocking.html). Vitest supports fully jest syntax, so just remember vi === jest in those docs.
+In vitest (alternative of Jest for Vite) there’s a pretty good guide on [mocking](https://vitest.dev/guide/mocking.html). Vitest supports fully jest syntax, so just remember vi === jest in those docs.
 
 ## More resources
 

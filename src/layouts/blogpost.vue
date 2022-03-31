@@ -8,6 +8,10 @@
 .blogpost {
   color: white;
 
+  hr {
+    color: var(--clr-primary-3);
+    margin-block: 3rem;
+  }
   h1 {
     color: var(--clr-primary);
     text-align: center;

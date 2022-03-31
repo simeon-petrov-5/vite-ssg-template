@@ -3,7 +3,6 @@ import vue from '@vitejs/plugin-vue'
 import path from 'path'
 import AutoImport from 'unplugin-auto-import/vite'
 import Markdown from 'vite-plugin-md'
-import prism from 'markdown-it-prism'
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts';
 import Components from 'unplugin-vue-components/vite';
@@ -31,9 +30,10 @@ export default defineConfig({
       frontmatter: true,
       exposeFrontmatter: true,
       exposeExcerpt: true,
-      markdownItUses: [
-        prism,
-      ],
+      markdownItSetup(md) {
+        md.use(require('markdown-it-anchor'))
+        md.use(require('markdown-it-prism'))
+      },
     }),
     AutoImport({
       include: [
