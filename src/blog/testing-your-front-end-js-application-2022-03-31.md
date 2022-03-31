@@ -38,15 +38,11 @@ So what we want is to create "integration" tests - clicking all over our app, bu
 
 > [The more your tests resemble the way your software is used, the more confidence they can give you.](https://twitter.com/kentcdodds/status/977018512689455106)
 
-
-
-
-
 ## What exactly should I test? - Excerpts and links
 
 > [Think less about the code you are testing and more about the use cases that code support](https://kentcdodds.com/blog/how-to-know-what-to-test)
 
-### 📗 [Static vs Unit vs Integration vs E2E Testing for Frontend App](https://kentcdodds.com/blog/static-vs-unit-vs-integration-vs-e2e-tests)
+###  [Static vs Unit vs Integration vs E2E Testing for Frontend App](https://kentcdodds.com/blog/static-vs-unit-vs-integration-vs-e2e-tests)
 
 > Integration
 >
@@ -57,7 +53,7 @@ So what we want is to create "integration" tests - clicking all over our app, bu
 >
 > pure functions are the BEST for unit testing and I LOVE using jest-in-case for them!
 
-### 📗 [Testing Implementation Details](https://kentcdodds.com/blog/testing-implementation-details)
+### [📗 Testing Implementation Details](https://kentcdodds.com/blog/testing-implementation-details)
 
 > [Why is testing implementation details bad?](https://kentcdodds.com/blog/testing-implementation-details#why-is-testing-implementation-detailsbad)
 >
