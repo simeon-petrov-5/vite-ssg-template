@@ -1,7 +1,9 @@
 <template>
+  <Header />
   <div class="blogpost section section--sm">
     <router-view />
   </div>
+  <Footer />
 </template>
 
 <style lang="scss">

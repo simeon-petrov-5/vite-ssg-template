@@ -9,7 +9,11 @@
           <router-link class="clean" to="/blog">Blog</router-link>
         </li>
         <li class="nav-item">
-          <router-link class="clean" to="/">Contacts</router-link>
+          <router-link
+            class="clean"
+            :to="{ name: $route.name, hash: '#contacts-title' }"
+            >Contacts</router-link
+          >
         </li>
       </ul>
     </nav>

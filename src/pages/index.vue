@@ -2,7 +2,6 @@
 import Hero from "./components/Hero.vue";
 import About from "./components/About.vue";
 import TechStack from "./components/TechStack.vue";
-import Contacts from "./components/Contacts.vue";
 
 useHead({
   title: "Home | icantevencode",
@@ -19,5 +18,4 @@ useHead({
   <Hero />
   <About />
   <TechStack />
-  <Contacts />
 </template>

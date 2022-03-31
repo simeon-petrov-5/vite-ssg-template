@@ -11,6 +11,5 @@ onMounted(() => {
 </script>
 
 <template>
-  <Header />
   <router-view />
 </template>
