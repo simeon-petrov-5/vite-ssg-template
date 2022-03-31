@@ -23,6 +23,8 @@
 <style lang="scss" scoped>
 .header {
   position: fixed;
+  top: 0px;
+  left: 0px;
   background-color: var(--clr-page);
   width: 100%;
   padding: 0.5rem 2rem;

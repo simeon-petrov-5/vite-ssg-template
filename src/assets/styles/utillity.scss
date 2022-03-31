@@ -3,6 +3,7 @@
   --inline-padding: 1rem;
   padding-inline: var(--inline-padding);
   padding-block: calc(var(--inline-padding) + 2rem);
+  overflow-x: hidden;
 }
 
 .section--sm {
@@ -21,9 +22,3 @@
     --inline-padding: 3rem;
   }
 }
-
-/* @media screen and (min-width: 1024px) {
-  .section {
-    --inline-padding: 4rem;
-  }
-} */
