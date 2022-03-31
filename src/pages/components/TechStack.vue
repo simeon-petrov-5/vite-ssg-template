@@ -63,11 +63,11 @@ const randomColor = () => {
 
 <template>
   <section id="section-stack" class="section section--sm techstack">
-    <div>
+    <div style="overflow: hidden">
       <h2 class="title-1" data-aos="fade-up">words i know / use / guess</h2>
-      <span class="subTitle" data-aos="fade-left" data-aos-delay="500"
-        >You get the drill</span
-      >
+      <span class="subTitle" data-aos="fade-left" data-aos-delay="500">
+        You get the drill
+      </span>
     </div>
 
     <ul class="stack-list" data-aos="fade-up">
@@ -104,10 +104,11 @@ const randomColor = () => {
     margin-left: auto;
     display: block;
     font-size: var(--font-size-fluid-0);
-    text-align: right;
+    text-align: left;
     color: var(--clr-primary-3);
     margin-bottom: 3rem;
     font-style: italic;
+    margin-right: 0.75rem;
   }
 
   .stack-list {
@@ -148,6 +149,12 @@ const randomColor = () => {
     &:where(.aos-animate) > li {
       animation: stack-fade-right 500ms forwards ease-in;
     }
+  }
+}
+
+@media screen and (min-width: 852px) {
+  .techstack div .subTitle {
+    text-align: right;
   }
 }
 </style>

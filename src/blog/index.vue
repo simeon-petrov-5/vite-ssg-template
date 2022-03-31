@@ -42,7 +42,6 @@ let articles = Object.keys(articleGlobs).map((key) => {
   }
   img {
     border-radius: 0.5rem;
-    // overflow: ;
   }
   p {
     color: var(--clr-label);

@@ -46,12 +46,14 @@ const onSubmit = (event) => {
 <template>
   <section id="section-contacts" class="section section--sm contacts">
     <h2 id="contacts-title" class="title-1" data-aos="fade-up">Contacts</h2>
-    <p class="text" data-aos="fade-left" data-aos-delay="300">
-      Find me on
-      <a href="https://www.linkedin.com/in/simeonpetrov5/" target="__blank">
-        LinkedIn
-      </a>
-    </p>
+    <div style="overflow: hidden">
+      <p class="text" data-aos="fade-left" data-aos-delay="300">
+        Find me on
+        <a href="https://www.linkedin.com/in/simeonpetrov5/" target="__blank">
+          LinkedIn
+        </a>
+      </p>
+    </div>
 
     <form
       class="form agrid"
