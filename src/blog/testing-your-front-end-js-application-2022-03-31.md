@@ -22,6 +22,8 @@ After different discussions and thoughts I had a feeling that the test suits I�
 
 If you’re completely new to testing - check what unit, integration and end to end testing is so you can differentiate what I have gathered here. Probably also going through the docs of Jest like  <https://jestjs.io/docs/setup-teardown> will help or any other course from the more resources here, at the end of the article. Also some notes on code coverage: [What is a branch in code coverage for JavaScript unit testing](https://stackoverflow.com/questions/35034977/what-is-a-branch-in-code-coverage-for-javascript-unit-testing) &  [Code coverage](https://en.wikipedia.org/wiki/Code_coverage).
 
+---
+
 ## What is this?
 
 In short - I went through 20 or so articles on the topic of testing from [kentcdodds' blog](https://kentcdodds.com/blog?q=testing) and other places and gatherd those here for future references and for other to use this as a starting point. I will link most of these with some excerpts to outline and share important concepts. I would advise you to go through all of these too.
@@ -29,6 +31,8 @@ In short - I went through 20 or so articles on the topic of testing from [kentcd
 This guide will give you a lot of references and links to material, which you should go and analyze, learn and consume on your own. This guide will not give you direct answers about what and why to do, on syntax or on how to configure testing in your project.
 
 ⚠️ These materials are targeted to be universal - even if you see "React", "Vue", "Angular" or whatever framework in the title, this doesn't mean that it's something you should pass - the underlying idea of testing is the same, as are generally the assertions (rules) that we use and the overall methodology, architecture and syntax. ⚠️
+
+---
 
 ## TL;DR
 
@@ -38,11 +42,14 @@ So what we want is to create "integration" tests - clicking all over our app, bu
 
 > [The more your tests resemble the way your software is used, the more confidence they can give you.](https://twitter.com/kentcdodds/status/977018512689455106)
 
+---
+
 ## What exactly should I test? - Excerpts and links
 
 > [Think less about the code you are testing and more about the use cases that code support](https://kentcdodds.com/blog/how-to-know-what-to-test)
 
-###  [Static vs Unit vs Integration vs E2E Testing for Frontend App](https://kentcdodds.com/blog/static-vs-unit-vs-integration-vs-e2e-tests)
+
+#### [📗 Static vs Unit vs Integration vs E2E Testing for Frontend App](https://kentcdodds.com/blog/static-vs-unit-vs-integration-vs-e2e-tests)
 
 > Integration
 >
@@ -53,7 +60,7 @@ So what we want is to create "integration" tests - clicking all over our app, bu
 >
 > pure functions are the BEST for unit testing and I LOVE using jest-in-case for them!
 
-### [📗 Testing Implementation Details](https://kentcdodds.com/blog/testing-implementation-details)
+#### [📗 Testing Implementation Details](https://kentcdodds.com/blog/testing-implementation-details)
 
 > [Why is testing implementation details bad?](https://kentcdodds.com/blog/testing-implementation-details#why-is-testing-implementation-detailsbad)
 >
@@ -78,7 +85,7 @@ So what we want is to create "integration" tests - clicking all over our app, bu
 > 4. Write down a list of instructions for that user to manually test that code to make sure it's not broken. (render the form with some fake data in the cart, click the checkout button, ensure the mocked /checkout API was called with the right data, respond with a fake successful response, make sure the success message is displayed).
 > 5. Turn that list of instructions into an automated test.
 
-### 📗 [Write tests. Not too many. Mostly integration.](https://kentcdodds.com/blog/write-tests)
+#### [📗 Write tests. Not too many. Mostly integration.](https://kentcdodds.com/blog/write-tests)
 
 > I've heard managers and teams mandating 100% code coverage for applications. That's a really bad idea. The problem is that you get diminishing returns on your tests as the coverage increases much beyond 70% (I made that number up... no science there). Why is that? Well, when you strive for 100% all the time, you find yourself spending time testing things that really don't need to be tested. Things that really have no logic in them at all (so any bugs could be caught by ESLint and Flow). Maintaining tests like this actually really slow you and your team down.
 >
@@ -87,13 +94,13 @@ So what we want is to create "integration" tests - clicking all over our app, bu
 > \
 > Integration tests strike a great balance on the trade-offs between confidence and speed/expense. This is why it's advisable to spend most (not all, mind you) of your effort there.
 
-### 📗 \[Common Testing Mistakes](https://kentcdodds.com/blog/common-testing-mistakes)
+#### [📗 Common Testing Mistakes](https://kentcdodds.com/blog/common-testing-mistakes)
 
 > \[Mistake Number 1: Testing Implementation Details](https://kentcdodds.com/blog/common-testing-mistakes#mistake-number-1-testing-implementation-details)
 >
 > I harp on this a lot (\[read more](https://kentcdodds.com/blog/testing-implementation-details)). It's because it's a huge problem in testing and leads to tests that don't give nearly as much confidence as they could. Here's a very simple example of a test that's testing implementation details:
 
-### 📗 \[Making your UI tests resilient to change](https://kentcdodds.com/blog/making-your-ui-tests-resilient-to-change)
+#### [📗 Making your UI tests resilient to change](https://kentcdodds.com/blog/making-your-ui-tests-resilient-to-change)
 
 > \[So how do we write resilient selectors?](https://kentcdodds.com/blog/making-your-ui-tests-resilient-to-change#so-how-do-we-write-resilient-selectors)
 >
@@ -120,7 +127,8 @@ So what we want is to create "integration" tests - clicking all over our app, bu
 > 2. Type a fake password in the input labeled password
 > 3. Click on the button that has text sign in
 
-📗 \[Write fewer, longer tests](https://kentcdodds.com/blog/write-fewer-longer-tests)
+
+#### [📗 Write fewer, longer tests](https://kentcdodds.com/blog/write-fewer-longer-tests)
 
 > Many people read that list of requirements for a component and turn those into individual test cases. Maybe you've read about a so-called "only one assertion per test best practice." Let's give that a try:
 >
@@ -152,18 +160,18 @@ So what we want is to create "integration" tests - clicking all over our app, bu
 >
 > Think of a test case workflow for a manual tester and try to make each of your test cases include all parts to that workflow. This often results in multiple actions and assertions which is fine.
 
-### More really good (important) articles from Kent’s blog:
+#### 📗 More really good (important) articles from Kent’s blog:
 
-* \[How to know what to test](https://kentcdodds.com/blog/how-to-know-what-to-test)
-* \[When I follow TDD](https://kentcdodds.com/blog/when-i-follow-tdd)
-* \[Test Isolation with React](https://kentcdodds.com/blog/test-isolation-with-react)
-* \[Why I Never Use Shallow Rendering](https://kentcdodds.com/blog/why-i-never-use-shallow-rendering)
+* [How to know what to test](https://kentcdodds.com/blog/how-to-know-what-to-test)
+* [When I follow TDD](https://kentcdodds.com/blog/when-i-follow-tdd)
+* [Test Isolation with React](https://kentcdodds.com/blog/test-isolation-with-react)
+* [Why I Never Use Shallow Rendering](https://kentcdodds.com/blog/why-i-never-use-shallow-rendering)
 
 ### Render/Mount - Normal vs Shallow
 
-\[Deep vs Shallow Rendering in Vue.js Tests](https://vuedose.tips/deep-vs-shallow-rendering-in-vuejs-tests)
+[Deep vs Shallow Rendering in Vue.js Tests](https://vuedose.tips/deep-vs-shallow-rendering-in-vuejs-tests)
 
-\[Hybrid Rendering: the secret way to smoothly test Vue.js components](https://vuedose.tips/hybrid-rendering-the-secret-way-to-test-components-in-vuejs)
+[Hybrid Rendering: the secret way to smoothly test Vue.js components](https://vuedose.tips/hybrid-rendering-the-secret-way-to-test-components-in-vuejs)
 
 Deep Rendering - Deep rendering, as the name states, renders all component tree given a root component.
 
@@ -175,40 +183,34 @@ In vitest (alternative of Jest for Vite) there’s a pretty good guide on \[mock
 
 ## More resources
 
-* \[What Is Integration Testing](https://www.youtube.com/watch?v=kRD6PA6uxiY)
-* \[Series: Unit testing in Javascript (fun fun function)](https://www.youtube.com/playlist?list=PL0zVEGEvSaeF_zoW9o66wa_UCNE3a7BEr)
-* \[Course: JavaScript Testing Introduction Tutorial - Unit Tests, Integration Tests & e2e Tests](https://www.youtube.com/watch?v=r9HdJ8P6GQI)
-* \[Course: Testing JavaScript with Jest (What’s Jest, snapshot, watch, etc.) Kent  C Dodds ](https://egghead.io/courses/testing-javascript-with-jest-a36c4074)
-* \[Course: Intro To JavaScript Unit Testing & BDD (2 Hour+ Course)](https://www.youtube.com/watch?v=u5cLK1UrFyQ)
-* \[Talk: What We Can Learn About Testing From The Wheel](https://www.youtube.com/watch?v=Da9wfQ0frGA&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
-* \[Talk: Kent C. Dodds – Write tests. Not too many. Mostly integration.](https://www.youtube.com/watch?v=Fha2bVoC8SE&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
+* [What Is Integration Testing](https://www.youtube.com/watch?v=kRD6PA6uxiY)
+* [Series: Unit testing in Javascript (fun fun function)](https://www.youtube.com/playlist?list=PL0zVEGEvSaeF_zoW9o66wa_UCNE3a7BEr)
+* [Course: JavaScript Testing Introduction Tutorial - Unit Tests, Integration Tests & e2e Tests](https://www.youtube.com/watch?v=r9HdJ8P6GQI)
+* [Course: Testing JavaScript with Jest (What’s Jest, snapshot, watch, etc.) Kent  C Dodds ](https://egghead.io/courses/testing-javascript-with-jest-a36c4074)
+* [Course: Intro To JavaScript Unit Testing & BDD (2 Hour+ Course)](https://www.youtube.com/watch?v=u5cLK1UrFyQ)
+* [Talk: What We Can Learn About Testing From The Wheel](https://www.youtube.com/watch?v=Da9wfQ0frGA&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
+* [Talk: Kent C. Dodds – Write tests. Not too many. Mostly integration.](https://www.youtube.com/watch?v=Fha2bVoC8SE&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
 
 ## React resources
 
 (again - the underlying logic and methods are the same)
 
-* \[Course: Net Ninja React Testing Library Tutorial](https://www.youtube.com/watch?v=7dTTFW7yACQ)
-* \[Adding tests to a React Application (and building an accessible star rating component)](https://www.youtube.com/watch?v=2rmUyzN4J38)
-* \[Adding tests to a React Application (part 2... for real this time)](https://www.youtube.com/watch?v=sqCikjna2Lg)
-* \[Testing a Multi-Page form](https://www.youtube.com/watch?v=9xaJ78qEJCM)
-* \[Testing a Multi-Page form part 2](https://www.youtube.com/watch?v=I0dYO2JMUmQ)
-* \[Testing a React component that uses useContext](https://www.youtube.com/watch?v=3yiialslPbc)
-* \[Livestream: Writing tests for a React app](https://www.youtube.com/watch?v=knQR1oHMQFA)
-* \[Livestream: Integration testing a React App](https://www.youtube.com/watch?v=pcFUAvoqiaQ)
-* \[Ask Me Anything about Testing](https://www.youtube.com/watch?v=T5q0uUPw3uQ)
+* [Course: Net Ninja React Testing Library Tutorial](https://www.youtube.com/watch?v=7dTTFW7yACQ)
+* [Adding tests to a React Application (and building an accessible star rating component)](https://www.youtube.com/watch?v=2rmUyzN4J38)
+* [Adding tests to a React Application (part 2... for real this time)](https://www.youtube.com/watch?v=sqCikjna2Lg)
+* [Testing a Multi-Page form](https://www.youtube.com/watch?v=9xaJ78qEJCM)
+* [Testing a Multi-Page form part 2](https://www.youtube.com/watch?v=I0dYO2JMUmQ)
+* [Testing a React component that uses useContext](https://www.youtube.com/watch?v=3yiialslPbc)
+* [Livestream: Writing tests for a React app](https://www.youtube.com/watch?v=knQR1oHMQFA)
+* [Livestream: Integration testing a React App](https://www.youtube.com/watch?v=pcFUAvoqiaQ)
+* [Ask Me Anything about Testing](https://www.youtube.com/watch?v=T5q0uUPw3uQ)
 
 </p>
 
 <route>
-
 {
-
   meta: {
-
     layout: 'blogpost'
-
   }
-
 }
-
 </route>
