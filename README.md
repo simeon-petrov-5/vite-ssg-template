@@ -21,6 +21,8 @@ This is the project for my personal website [icantevencode.com](https://icanteve
 - [ ] Check Netlify Richtext to MD escaping valid Markdown [examples](https://github.com/netlify/netlify-cms/issues/4360)
 - [ ] 🚩 Think about own git based admin? [headless-cms](https://jamstack.org/headless-cms/) / Obsidian as CMS ?
 - [ ] Use aGrid's sass module to trim excess
+- [ ] Add analytics like https://splitbee.io/docs/javascript-library
+- [ ] Add cookies module & page
 
 
 ## Is it worth it?
