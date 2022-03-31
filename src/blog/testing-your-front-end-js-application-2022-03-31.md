@@ -8,7 +8,7 @@ excerpt: This guide will give you a lot of references and links to material,
   will not give you direct answers about what and why to do, on syntax or on how
   to configure testing in your project
 ---
-\# {{frontmatter.title}}
+# {{frontmatter.title}}
 
 <p class="sub-title">Testing your JS application - a (not so) simple and (not so) short guide and resource map</p>
 
@@ -38,7 +38,11 @@ So what we want is to create "integration" tests - clicking all over our app, bu
 
 > [The more your tests resemble the way your software is used, the more confidence they can give you.](https://twitter.com/kentcdodds/status/977018512689455106)
 
-What exactly should I test? - Excerpts and links
+
+
+
+
+## What exactly should I test? - Excerpts and links
 
 > [Think less about the code you are testing and more about the use cases that code support](https://kentcdodds.com/blog/how-to-know-what-to-test)
 
@@ -159,53 +163,43 @@ What exactly should I test? - Excerpts and links
 * \[Test Isolation with React](https://kentcdodds.com/blog/test-isolation-with-react)
 * \[Why I Never Use Shallow Rendering](https://kentcdodds.com/blog/why-i-never-use-shallow-rendering)
 
-
-
 ### Render/Mount - Normal vs Shallow
 
-[Deep vs Shallow Rendering in Vue.js Tests](https://vuedose.tips/deep-vs-shallow-rendering-in-vuejs-tests)
+\[Deep vs Shallow Rendering in Vue.js Tests](https://vuedose.tips/deep-vs-shallow-rendering-in-vuejs-tests)
 
-[Hybrid Rendering: the secret way to smoothly test Vue.js components](https://vuedose.tips/hybrid-rendering-the-secret-way-to-test-components-in-vuejs)
+\[Hybrid Rendering: the secret way to smoothly test Vue.js components](https://vuedose.tips/hybrid-rendering-the-secret-way-to-test-components-in-vuejs)
 
 Deep Rendering - Deep rendering, as the name states, renders all component tree given a root component.
 
 Shallow Rendering - Opposite to deep rendering, shallow rendering only renders the component that you're testing without going into deeper levels.
 
-
-
 ### Mocking
 
-In vitest (alternative of Jest for Vite) there’s a pretty good guide on [mocking](https://vitest.dev/guide/mocking.html). Vitest supports fully jest syntax, so just remember vi === jest in those docs.
-
-
+In vitest (alternative of Jest for Vite) there’s a pretty good guide on \[mocking](https://vitest.dev/guide/mocking.html). Vitest supports fully jest syntax, so just remember vi === jest in those docs.
 
 ## More resources
 
-* [What Is Integration Testing](https://www.youtube.com/watch?v=kRD6PA6uxiY)
-* [Series: Unit testing in Javascript (fun fun function)](https://www.youtube.com/playlist?list=PL0zVEGEvSaeF_zoW9o66wa_UCNE3a7BEr)
-* [Course: JavaScript Testing Introduction Tutorial - Unit Tests, Integration Tests & e2e Tests](https://www.youtube.com/watch?v=r9HdJ8P6GQI)
-* [Course: Testing JavaScript with Jest (What’s Jest, snapshot, watch, etc.) Kent  C Dodds ](https://egghead.io/courses/testing-javascript-with-jest-a36c4074)
-* [Course: Intro To JavaScript Unit Testing & BDD (2 Hour+ Course)](https://www.youtube.com/watch?v=u5cLK1UrFyQ)
-* [Talk: What We Can Learn About Testing From The Wheel](https://www.youtube.com/watch?v=Da9wfQ0frGA&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
-* [Talk: Kent C. Dodds – Write tests. Not too many. Mostly integration.](https://www.youtube.com/watch?v=Fha2bVoC8SE&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
+* \[What Is Integration Testing](https://www.youtube.com/watch?v=kRD6PA6uxiY)
+* \[Series: Unit testing in Javascript (fun fun function)](https://www.youtube.com/playlist?list=PL0zVEGEvSaeF_zoW9o66wa_UCNE3a7BEr)
+* \[Course: JavaScript Testing Introduction Tutorial - Unit Tests, Integration Tests & e2e Tests](https://www.youtube.com/watch?v=r9HdJ8P6GQI)
+* \[Course: Testing JavaScript with Jest (What’s Jest, snapshot, watch, etc.) Kent  C Dodds ](https://egghead.io/courses/testing-javascript-with-jest-a36c4074)
+* \[Course: Intro To JavaScript Unit Testing & BDD (2 Hour+ Course)](https://www.youtube.com/watch?v=u5cLK1UrFyQ)
+* \[Talk: What We Can Learn About Testing From The Wheel](https://www.youtube.com/watch?v=Da9wfQ0frGA&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
+* \[Talk: Kent C. Dodds – Write tests. Not too many. Mostly integration.](https://www.youtube.com/watch?v=Fha2bVoC8SE&list=PLV5CVI1eNcJgNqzNwcs4UKrlJdhfDjshf)
 
-
-
-## React resources 
+## React resources
 
 (again - the underlying logic and methods are the same)
 
-* [Course: Net Ninja React Testing Library Tutorial](https://www.youtube.com/watch?v=7dTTFW7yACQ)
-* [Adding tests to a React Application (and building an accessible star rating component)](https://www.youtube.com/watch?v=2rmUyzN4J38)
-* [Adding tests to a React Application (part 2... for real this time)](https://www.youtube.com/watch?v=sqCikjna2Lg)
-* [Testing a Multi-Page form](https://www.youtube.com/watch?v=9xaJ78qEJCM)
-* [Testing a Multi-Page form part 2](https://www.youtube.com/watch?v=I0dYO2JMUmQ)
-* [Testing a React component that uses useContext](https://www.youtube.com/watch?v=3yiialslPbc)
-* [Livestream: Writing tests for a React app](https://www.youtube.com/watch?v=knQR1oHMQFA)
-* [Livestream: Integration testing a React App](https://www.youtube.com/watch?v=pcFUAvoqiaQ)
-* [Ask Me Anything about Testing](https://www.youtube.com/watch?v=T5q0uUPw3uQ)
-
-
+* \[Course: Net Ninja React Testing Library Tutorial](https://www.youtube.com/watch?v=7dTTFW7yACQ)
+* \[Adding tests to a React Application (and building an accessible star rating component)](https://www.youtube.com/watch?v=2rmUyzN4J38)
+* \[Adding tests to a React Application (part 2... for real this time)](https://www.youtube.com/watch?v=sqCikjna2Lg)
+* \[Testing a Multi-Page form](https://www.youtube.com/watch?v=9xaJ78qEJCM)
+* \[Testing a Multi-Page form part 2](https://www.youtube.com/watch?v=I0dYO2JMUmQ)
+* \[Testing a React component that uses useContext](https://www.youtube.com/watch?v=3yiialslPbc)
+* \[Livestream: Writing tests for a React app](https://www.youtube.com/watch?v=knQR1oHMQFA)
+* \[Livestream: Integration testing a React App](https://www.youtube.com/watch?v=pcFUAvoqiaQ)
+* \[Ask Me Anything about Testing](https://www.youtube.com/watch?v=T5q0uUPw3uQ)
 
 </p>
 
