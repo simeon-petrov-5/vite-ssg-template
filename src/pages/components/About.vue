@@ -1,14 +1,14 @@
-<script setup>
-defineProps({
-  isVisible: Boolean,
-});
-</script>
-
 <template>
   <section id="section-about" class="section section--sm about">
-    <h2 :class="{ 'fade-up': isVisible }" class="title-1">About me</h2>
+    <h2 id="about-title" class="title-1" data-aos="fade-up">About me</h2>
 
-    <p :class="{ 'fade-up': isVisible }" class="text">
+    <p
+      class="text"
+      data-aos="fade-up"
+      data-aos-anchor="#about-title"
+      data-aos-anchor-placement="top-bottom"
+      data-aos-delay="600"
+    >
       I'm a Front-end developer based in Sofia, Bulgaria 🇧🇬 . Currently I'm
       working at
       <a
@@ -22,7 +22,13 @@ defineProps({
       afterwards I worked couple of years with React (integrated with Sharepoint
       Online), but now I have transitioned completely to the green side.
     </p>
-    <p :class="{ 'fade-up': isVisible }" class="text">
+    <p
+      class="text"
+      data-aos="fade-up"
+      data-aos-anchor="#about-title"
+      data-aos-anchor-placement="top-bottom"
+      data-aos-delay="900"
+    >
       I have worked on couple different projects and applications like: Video
       Platform <span class="accent">[ Vue ]</span>, Backoffice App
       <span class="accent">[ Vue ]</span>, Extending UI Component Library
@@ -38,16 +44,3 @@ defineProps({
     </p>
   </section>
 </template>
-
-<style lang="scss" scoped>
-.about {
-  position: relative;
-  .title-1{
-    opacity: 0;
-  }
-  p {
-    opacity: 0;
-    animation-delay: 300ms;
-  }
-}
-</style>
