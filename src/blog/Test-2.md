@@ -8,3 +8,11 @@ published: 28.04.2022
 # Hello World
 
 This is {{frontmatter.title}} @ 22222
+
+<route>
+{
+  meta: {
+    layout: 'blogpost'
+  }
+}
+</route>

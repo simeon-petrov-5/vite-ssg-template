@@ -6,18 +6,13 @@ thumbnail: https://images.unsplash.com/photo-1640622304233-7335e936f11b?ixlib=rb
 ---
 # TEsting Netlify cms AGAIN
 
-*Testing your JS application - a (not so) simple and (not so) short guide and resource map*
+<p class="sub-title">*Testing your JS application - a (not so) simple and (not so) short guide and resource map*</p>
 
 
-
-<img class="featured-img" :src="frontmatter.thumbnail" />
-
+<ArticleImage :src="frontmatter.thumbnail" />
 
 
-
-
-<!--StartFragment-->
-
+<p>
 This guide will give you a lot of references and links to material, which you should go and analyze, learn and consume on your own. This guide will not give you direct answers about what and why to do, on syntax or on how to configure testing in your project.
 
 These materials are targeted to be universal - even if you see "React", "Vue", "Angular" or whatever framework in the title, this doesn't mean that it's something you should pass - the underlying idea of testing is the same, as are generally the assertions (rules) that we use and the overall methodology, architecture and syntax.
@@ -32,8 +27,16 @@ So what we want is to create "integration" tests - clicking all over our app, bu
 
 The more your tests resemble the way your software is used, the more confidence they can give you.
 
-<!--EndFragment-->
+- 1
+- 2
+- 3
 
+
+> Text that is a quote
+
+</p>
+
+> Text that is a quote
 
 
 <route>
