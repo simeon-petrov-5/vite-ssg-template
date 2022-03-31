@@ -3,14 +3,16 @@ layout: blog
 title: TEsting Netlify cms AGAIN
 date: 2022-03-30T21:55:23.106Z
 thumbnail: https://images.unsplash.com/photo-1640622304233-7335e936f11b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80
+excerpt: This guide will give you a lot of references and links to material,
+  which you should go and analyze, learn and consume on your own. This guide
+  will not give you direct answers about what and why to do, on syntax or on how
+  to configure testing in your project.
 ---
 # {{frontmatter.title}}
 
-<p class="sub-title">*Testing your JS application - a (not so) simple and (not so) short guide and resource map*</p>
-
+<p class="sub-title">Testing your JS application - a (not so) simple and (not so) short guide and resource map</p>
 
 <ArticleImage :src="frontmatter.thumbnail" />
-
 
 <p>
 This guide will give you a lot of references and links to material, which you should go and analyze, learn and consume on your own. This guide will not give you direct answers about what and why to do, on syntax or on how to configure testing in your project.
@@ -27,17 +29,15 @@ So what we want is to create "integration" tests - clicking all over our app, bu
 
 The more your tests resemble the way your software is used, the more confidence they can give you.
 
-- 1
-- 2
-- 3
-
+* 1
+* 2
+* 3
 
 > Text that is a quote
 
 </p>
 
 > Text that is a quote
-
 
 <route>
 {
