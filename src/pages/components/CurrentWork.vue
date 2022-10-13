@@ -1,14 +1,13 @@
 <script setup>
-// import { ref } from "vue";
 import { useElementSize } from "@vueuse/core";
 const topics = [
+  "🛒 Nuxt & Strapi eCommerce",
   "🕷️ Crawlers",
-  "💾 Using Git for storing data",
-  "🎨 Design systems and tokens",
+  "💾 Git for storing data",
+  "🎨 Design systems & tokens",
   "🖥️ Home servers / NAS",
   "🤖 SmartHome",
-  "⚡ Astro",
-  "💸 Stripe Webhooks",
+  "⚡ Astro"
 ];
 const layerEl = ref(null);
 const { width, height } = useElementSize(layerEl);
