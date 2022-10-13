@@ -2,6 +2,7 @@
 import Hero from "./components/Hero.vue";
 import About from "./components/About.vue";
 import TechStack from "./components/TechStack.vue";
+import CurrentWork from "./components/CurrentWork.vue";
 
 useHead({
   title: "Home | icantevencode",
@@ -18,4 +19,5 @@ useHead({
   <Hero />
   <About />
   <TechStack />
+  <CurrentWork />
 </template>

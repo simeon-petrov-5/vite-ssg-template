@@ -87,11 +87,11 @@ const randomColor = () => {
 <style lang="scss" scoped>
 @keyframes stack-fade-right {
   from {
-    margin-left: -10px;
+    left: -10px;
     opacity: 0;
   }
   to {
-    margin-left: 0px;
+    left: 0px;
     opacity: 1;
   }
 }
@@ -125,6 +125,7 @@ const randomColor = () => {
         var(--lime-6),
         var(--orange-4)
       );
+
     }
 
     .stack--general {
@@ -138,6 +139,8 @@ const randomColor = () => {
     }
 
     & > li {
+      position: relative;
+      left: -10px;
       opacity: 0;
     }
     @for $i from 2 to 30 {
