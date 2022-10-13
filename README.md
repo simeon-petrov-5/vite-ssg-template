@@ -1,6 +1,6 @@
 # icantevencode - Static website based on Vue + Vite + NetlifyCMS
 
-This is the project for my personal website [icantevencode.com]([icantevencode.com/](https://icantevencode.com/)). This is pretty much a playground to spin up something a little bit unusual - a static site without the usual Nuxt/Gridsome/Gatsby stuff. The SSG part is handled by Vite plugins and the blog is git-based via NetlifyCMS.
+This is the project for my personal website [icantevencode.com](https://icantevencode.com/). This is pretty much a playground to spin up something a little bit unusual - a static site without the usual Nuxt/Gridsome/Gatsby stuff. The SSG part is handled by Vite plugins and the blog is git-based via NetlifyCMS.
 
 ## Features
 - 💚 Vue 3 + `<script setup>`
@@ -21,6 +21,8 @@ This is the project for my personal website [icantevencode.com]([icantevencode.c
 - [ ] Check Netlify Richtext to MD escaping valid Markdown [examples](https://github.com/netlify/netlify-cms/issues/4360)
 - [ ] 🚩 Think about own git based admin? [headless-cms](https://jamstack.org/headless-cms/) / Obsidian as CMS ?
 - [ ] Use aGrid's sass module to trim excess
+- [ ] Add analytics like https://splitbee.io/docs/javascript-library
+- [ ] Add cookies module & page
 
 
 ## Is it worth it?
