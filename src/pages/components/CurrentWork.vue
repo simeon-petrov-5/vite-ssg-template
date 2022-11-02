@@ -7,19 +7,13 @@ const topics = [
   "🎨 Design systems & tokens",
   "🖥️ Home servers / NAS",
   "🤖 SmartHome",
-  "⚡ Astro"
+  "⚡ Astro",
 ];
 const layerEl = ref(null);
 const { width, height } = useElementSize(layerEl);
-const columns = computed(() => {
-  return Math.floor(width.value / 50);
-});
-const rows = computed(() => {
-  return Math.floor(height.value / 50);
-});
-const cells = computed(() => {
-  return columns.value * rows.value;
-});
+const columns = computed(() => Math.floor(width.value / 50));
+const rows = computed(() => Math.floor(height.value / 50));
+const cells = computed(() => columns.value * rows.value);
 </script>
 
 <template>
@@ -38,7 +32,7 @@ const cells = computed(() => {
       <h2 class="title-1" data-aos="fade-up">
         What's currently keeping me up at night? 🧠
       </h2>
-      <ul class="topics" role="list" data-aos="fade-up" >
+      <ul class="topics" role="list" data-aos="fade-up">
         <li v-for="topic in topics" :key="topic" class="text topics__item">
           {{ topic }}
         </li>

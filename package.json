@@ -1,5 +1,5 @@
 {
-  "name": "icantevencode",
+  "name": "vite-ssg-template",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",

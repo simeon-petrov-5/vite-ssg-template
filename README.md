@@ -1,6 +1,8 @@
-# icantevencode - Static website based on Vue + Vite + NetlifyCMS
+# Static website based on Vue + Vite + NetlifyCMS
 
-This is the project for my personal website [icantevencode.com](https://icantevencode.com/). This is pretty much a playground to spin up something a little bit unusual - a static site without the usual Nuxt/Gridsome/Gatsby stuff. The SSG part is handled by Vite plugins and the blog is git-based via NetlifyCMS.
+⚠️ This **used** to be the project for my personal website [icantevencode.com](https://icantevencode.com/). I have reworked it with Astro - [icantevencode](https://github.com/simeon-petrov-5/icantevencode). This project will be left as a POC and will not be used anymore.
+
+This is pretty much a playground to spin up something a little bit unusual - a static site without the usual Nuxt/Gridsome/Gatsby stuff. The SSG part is handled by Vite plugins and the blog is git-based via NetlifyCMS.
 
 ## Features
 - 💚 Vue 3 + `<script setup>`
